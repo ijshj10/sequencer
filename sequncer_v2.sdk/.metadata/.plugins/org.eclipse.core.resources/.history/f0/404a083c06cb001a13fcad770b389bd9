@@ -1,0 +1,36 @@
+#include "io_rw.h"
+#include "io_map.h"
+
+#ifdef _cplusplus
+extern "C"{
+#endif
+#ifndef UART_H
+#define UART_H
+
+static const uint32_t uart_base = get_slot_addr(BRIDGE_BASE, S1_UART);
+static enum{
+	rd_data_reg=0,
+	dvsr_reg=1,
+	wr_data_reg=2,
+	rx_rd_data_reg=3
+};
+
+static enum{
+	tx_full_field = 0x00000200,
+	rx_empty_field = 0x00000100,
+	data_field = 0x000000ff
+};
+
+int rx_empty(){
+	uint32_t rd_word;
+
+	rd_word = io_read(uart_base, rd_data_reg);
+	return (rd_word & rx_empty_field);
+}
+
+
+
+#endif
+#ifdef _cplusplus
+}
+#endif

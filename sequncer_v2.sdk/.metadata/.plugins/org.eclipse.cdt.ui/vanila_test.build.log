@@ -1,0 +1,91 @@
+22:33:20 **** Auto Build of configuration Debug for project vanila_test ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mno-xl-reorder -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:2:0:
+../src/uart.h:18:1: warning: useless storage class specifier in empty declaration
+ };
+ ^
+../src/uart.h:24:1: warning: useless storage class specifier in empty declaration
+ };
+ ^
+../src/main.c: In function 'get_cmd':
+../src/main.c:15:8: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  DEBUG("LEN:%d\n",len);
+        ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:20:9: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   DEBUG("CMD %d %d %d\n", rto_time.upper, rto_time.lower, cmd);
+         ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:20:9: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   DEBUG("CMD %d %d %d\n", rto_time.upper, rto_time.lower, cmd);
+         ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:20:9: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   DEBUG("CMD %d %d %d\n", rto_time.upper, rto_time.lower, cmd);
+         ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c: In function 'interact':
+../src/main.c:32:10: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    DEBUG("%d\n", get_buffer_status());
+          ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:35:10: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    DEBUG("%d %d\n", rto_time.upper, rto_time.lower);
+          ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:35:10: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    DEBUG("%d %d\n", rto_time.upper, rto_time.lower);
+          ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:36:10: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    DEBUG("%d\n", get_head_cmd());
+          ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:42:8: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  DEBUG("%d\n", get_buffer_status());
+        ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+../src/main.c:47:9: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   DEBUG("%d\n", get_buffer_status());
+         ^
+../src/uart.h:83:42: note: in definition of macro 'DEBUG'
+ #define DEBUG(...) sprintf(print_buffer, __VA_ARGS__); uart_print(print_buffer)
+                                          ^~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: vanila_test.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../vanila_tester_bsp/microblaze_I/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "vanila_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: vanila_test.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size vanila_test.elf  |tee "vanila_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79936	   1436	   3452	  84824	  14b58	vanila_test.elf
+Finished building: vanila_test.elf.size
+ 
+
+22:33:20 Build Finished (took 124ms)
+

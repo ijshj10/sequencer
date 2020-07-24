@@ -1,0 +1,18 @@
+#include "io_rw.h"
+#include "io_map.h"
+
+#ifdef _cplusplus
+extern "C"{
+#endif
+#ifndef UART_H
+#define UART_H
+
+static const uint32_t uart_base = get_slot_addr(BRIDGE_BASE, S1_UART);
+
+
+
+
+#endif
+#ifdef _cplusplus
+}
+#endif

@@ -1,0 +1,52 @@
+#include "gpio.h"
+#include "timer.h"
+#include "uart.h"
+#include <string.h>
+
+char buf[128];
+char *current;
+
+int keyword(){
+	if(!strncmp("led", current, 3)){
+		current += 4;
+		return (*(current-1) - '0');
+	}
+	else if(!strncmp("btn", current, 3)){
+		current += 4;
+		return (*(current-1) - '0' +4);
+	}
+	else if(!strncmp("sw", current, 2)){
+		current += 3;
+		return (*(current-1) - '0' + 8);
+	}
+	return -1;
+}
+
+int value(){
+
+}
+
+void statement(){
+
+}
+
+int main(){
+	timer_init();
+
+	while(1){
+		int i = 0;
+		print(">> ");
+		while(1){
+			int c;
+			while((c=read_byte())==-1);
+			buf[i++] = c;
+			if(c == '\r')
+				break;
+			write_byte(c);
+		}
+		print("\n\r");
+		yytext = buf;
+		statement();
+		print("\n\r");
+	}
+}

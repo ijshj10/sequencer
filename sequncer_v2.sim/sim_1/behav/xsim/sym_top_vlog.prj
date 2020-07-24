@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../sequncer_v2.srcs/sources_1/imports/modules" --include "../../../../../fpga/modules" --include "/opt/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
+"../../../../sequncer_v2.srcs/sources_1/imports/modules/fifo.sv" \
+"../../../../sequncer_v2.srcs/sources_1/imports/modules/register_file.sv" \
+"../../../../sequncer_v2.srcs/sources_1/imports/modules/uart.sv" \
+"../../../../sequncer_v2.srcs/sim_1/new/sym_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

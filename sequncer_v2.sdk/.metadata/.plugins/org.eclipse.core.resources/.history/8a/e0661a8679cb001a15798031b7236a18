@@ -1,0 +1,40 @@
+#include "lex.h"
+#include <string.h>
+#include <ctype.h>
+
+
+char *yytext = "";
+int yyleng = 0;
+
+token_type lookahead = -1;
+
+token_type lex(){
+	yytext += yyleng;
+	char *current = yyleng;
+	while(isspace(*current))
+		++current;
+	for(;*current != '\r'; ++current){
+		yytext = current;
+		yyleng = 1;
+		switch(*current){
+		case '=': return EQ;
+		case '\r': return EOI;
+		default:
+			while(isalnum(*current))
+				current++;
+			yyleng = current - yytext;
+			
+		}
+	}
+	return EOI;
+}
+
+int match(token_type token){
+	if(lookahead == -1)
+		lookahead = lex();
+	return lookahead == token;
+}
+
+void advance(){
+	lookahead = lex();
+}

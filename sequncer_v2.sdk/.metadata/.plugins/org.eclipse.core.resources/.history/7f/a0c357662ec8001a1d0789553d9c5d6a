@@ -1,0 +1,15 @@
+#include "io_map.h"
+#include "io_rw.h"
+
+
+#define UART_BASE
+
+int uart_rx_empty()
+{
+	return io_read()
+}
+
+int main(){
+	while(1){
+	}
+}

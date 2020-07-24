@@ -1,0 +1,17 @@
+#include "lexer.h"
+
+static int lookahead = -1;
+int last_peripheral
+
+int lex(){
+
+}
+
+int match(int token){
+	if(lookahead == -1)
+		lookahead = lex();
+	return lookahead == token;
+}
+void advance(){
+	lookahead = lex();
+}

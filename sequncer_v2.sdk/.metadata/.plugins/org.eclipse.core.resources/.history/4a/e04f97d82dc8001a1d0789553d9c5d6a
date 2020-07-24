@@ -1,0 +1,8 @@
+#include "io_map.h"
+#include "io_rw.h"
+
+int main(){
+	while(1){
+
+	}
+}

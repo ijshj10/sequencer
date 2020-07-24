@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3574883621690033605  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 92af1ce036b84a84b729af15a0e7fbd1 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sym_top_behav xil_defaultlib.sym_top xil_defaultlib.glbl" , 
+    buildDate : "Oct  4 2017" , 
+    buildTime : "20:01:51" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/sym_top_behav/xsimk\"   \"xsim.dir/sym_top_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/sym_top_behav/obj/xsim_1.lnx64.o\" \"/opt/Xilinx/Vivado/2017.3/lib/lnx64.o/librdi_simulator_kernel.so\" \"/opt/Xilinx/Vivado/2017.3/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

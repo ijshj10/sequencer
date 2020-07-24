@@ -1,0 +1,28 @@
+#include <stdint.h>
+#include "uart.h"
+#include "timer.h"
+
+#define BUFFER_SIZE 256
+
+char buffer[BUFFER_SIZE];
+
+void get_cmd(){
+	uint8_t c;
+	uint32_t len = 0;
+	uint64_t time;
+	uint32_t cmd;
+	for(int i=0; i<4; i++){
+		c = read_blocking();
+
+	}
+}
+
+int main(){
+	timer_init();
+	while(1){
+		pause();
+		clear();
+		get_cmd();
+		sleep_sec(1);
+	}
+}

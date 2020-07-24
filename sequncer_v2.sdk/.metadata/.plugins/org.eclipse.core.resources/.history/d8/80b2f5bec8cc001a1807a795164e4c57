@@ -1,0 +1,15 @@
+#ifndef RTO_H
+#define RTO_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+const int rto_base = get_slot_addr(BRIDGE_BASE, S4_RTO);
+
+
+#ifdef __cplusplus
+extern }
+#endif
+
+#endif

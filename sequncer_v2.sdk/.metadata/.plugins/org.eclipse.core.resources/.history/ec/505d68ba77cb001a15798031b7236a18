@@ -1,0 +1,82 @@
+#include "gpio.h"
+#include "timer.h"
+#include "uart.h"
+#include "lex.h"
+#include <string.h>
+
+char buf[128];
+char *current;
+
+#define EQ 0
+#define KEYWORD 1
+#define VALUE
+
+int keyword(){
+	if(!strncmp("led", current, 3)){
+		current += 4;
+		return (*(current-1) - '0');
+	}
+	else if(!strncmp("btn", current, 3)){
+		current += 4;
+		return (*(current-1) - '0' +4);
+	}
+	else if(!strncmp("sw", current, 2)){
+		current += 3;
+		return (*(current-1) - '0' + 8);
+	}
+	return -1;
+}
+
+int match(int token){
+	return 0;
+}
+
+int value(){
+
+}
+
+void statement(){
+	while(*current == ' ')current++;
+	int peri1 = keyword();
+	while(*p == ' ')p++;
+	if(*p == '='){
+		p++;
+		while(*p == ' ')p++;
+		int peri2 = value();
+	}
+	else{
+		if(peri1>=0 && peri1 < 4){
+			if(gpo_get() & (1<<peri1))
+				print("1");
+			else
+				print("0");
+		}
+		else if(peri1>=4 && peri1 <12){
+			if(gpi_get() & (1<<(peri1-4)))
+				print("1");
+			else
+				print("0");
+		}
+	}
+}
+
+int main(){
+	timer_init();
+
+	while(1){
+		int i = 0;
+		print(">> ");
+		while(1){
+			int c;
+			while((c=read_byte())==-1);
+			buf[i++] = c;
+			if(c == '\r')
+				break;
+			write_byte(c);
+		}
+		print("\n\r");
+		current = buf;
+		statement();
+		print("\n\r");
+	}
+}

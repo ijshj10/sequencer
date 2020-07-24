@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="top_hw_platform_1-device"/>
+	<item value="top.bit" key="top_hw_platform_1-bitFile"/>
+	<item value="false" key="top_hw_platform_1-partial_bit"/>
+	<item value="top_hw_platform_1" key="programfpga.hwplatform"/>
+	<item value="Local" key="top_hw_platform_1-target"/>
+	<item value="top.mmi" key="top_hw_platform_1-bmmFile"/>
+	<item value="/home/hj/sequncer_v2/sequncer_v2.sdk/vanila_test/Debug/vanila_test.elf" key="top_hw_platform_1-microblaze_I-initElf"/>
+</section>

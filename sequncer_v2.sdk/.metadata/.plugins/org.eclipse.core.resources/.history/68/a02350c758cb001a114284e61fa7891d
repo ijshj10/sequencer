@@ -1,0 +1,26 @@
+#ifndef TIMER_H
+#define TIMER_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+static const uint32_t timer_base = get_slot_addr(BRIDGE_BASE, S0_SYS_TIMER);
+
+enum {
+	counter_upper_reg = 0,
+	counter_lower_reg = 1,
+	ctrl_reg = 2
+};
+
+enum {
+	go_field = 0x00000001,
+	clr_field = 0x00000002
+};
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

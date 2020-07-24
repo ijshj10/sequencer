@@ -1,0 +1,16 @@
+#ifndef TIMER_H
+#define TIMER_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+static const uint32_t timer_base = get_slot_addr(BRIDGE_BASE, S0_SYS_TIMER);
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

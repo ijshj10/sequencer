@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri Jul 17 21:00:31 2020
+# Process ID: 2933
+# Current directory: /home/hj/sequncer_v2/sequncer_v2.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/hj/sequncer_v2/sequncer_v2.sim/sim_1/behav/xsim/xsim.dir/stimulus_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/hj/sequncer_v2/sequncer_v2.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/hj/sequncer_v2/sequncer_v2.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/hj/sequncer_v2/sequncer_v2.sim/sim_1/behav/xsim/xsim.dir/stimulus_behav/webtalk/xsim_webtalk.tcl -notrace

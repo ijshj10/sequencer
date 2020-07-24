@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../sequncer_v2.srcs/sources_1/imports/modules" --include "../../../../../fpga/modules" --include "/opt/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
+"../../../../sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_6/sim/bd_3914_lmb_bram_I_0.v" \
+"../../../../sequncer_v2.srcs/sources_1/ip/cpu/bd_0/sim/bd_3914.v" \
+"../../../../sequncer_v2.srcs/sources_1/ip/cpu/sim/cpu.v" \
+
+sv xil_defaultlib  --include "../../../../sequncer_v2.srcs/sources_1/imports/modules" --include "../../../../../fpga/modules" --include "/opt/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
+"../../../../sequncer_v2.srcs/sim_1/new/stimulus.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

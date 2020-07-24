@@ -1,0 +1,18 @@
+#ifndef LEX_H
+#define LEX_H
+
+extern char *yytext;
+extern int yyleng;
+
+
+typedef enum token_type{
+	EOI,
+	KEYWORD,
+	EQ,
+	VALUE,
+} token_type;
+
+int match(token_type);
+void advance();
+
+#endif

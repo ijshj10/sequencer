@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="/home/hj/sequncer_v2/sequncer_v2.sdk/vanila_test/Debug" key="fpga_elf_mem_selection"/>
+	<item value="/home/hj/sequncer_v2/sequncer_v2.sdk/top_hw_platform_1" key="program_fpga_view_bit_bmm_browse_key"/>
+	<item value="/home/hj/sequncer_v2/sequncer_v2.sdk/vanila_test/Debug" key="last_stored_selection"/>
+</section>

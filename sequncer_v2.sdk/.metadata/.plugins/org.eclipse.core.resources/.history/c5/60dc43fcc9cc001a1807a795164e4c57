@@ -1,0 +1,84 @@
+#ifndef TIMER_H
+#define TIMER_H
+
+#include "io_map.h"
+#include "io_rw.h"
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+static const uint32_t timer_base = get_slot_addr(BRIDGE_BASE, S0_SYS_TIMER);
+static uint32_t ctrl = 1;
+
+typedef struct rto_time_t{
+	uint32_t upper;
+	uint32_t lower;
+}rto_time_t;
+
+enum {
+	counter_lower_reg = 0,
+	counter_upper_reg = 1,
+	ctrl_reg = 2
+};
+
+enum {
+	go_field = 0x00000001,
+	clr_field = 0x00000002
+};
+
+void timer_init(){
+	io_write(timer_base, ctrl_reg, ctrl);
+}
+
+void pause(){
+	ctrl =  ctrl & ~ go_field;
+	io_write(timer_base, ctrl_reg, ctrl);
+}
+
+void go(){
+	ctrl = ctrl | go_field;
+	io_write(timer_base, ctrl_reg, ctrl);
+}
+
+void clear(){
+	io_write(timer_base, ctrl_reg, ctrl | clr_field);
+}
+
+uint64_t read_tick(){
+	rto_time_t current_time;
+	upper = (uint64_t) io_read(timer_base, counter_upper_reg);
+	lower = (uint64_t) io_read(timer_base, counter_lower_reg);
+	return ((upper << 32) | lower);
+}
+
+uint64_t read_time_us(){
+	return (read_tick() / SYS_CLK_FREQ);
+}
+
+void sleep(uint64_t tick){
+	uint64_t start_time, now;
+	start_time = read_tick();
+	do{
+		now = read_tick();
+	}while(now-start_time < tick);
+}
+
+void sleep_us(uint64_t us){
+	sleep(SYS_CLK_FREQ * us);
+}
+
+void sleep_ms(uint64_t ms){
+	sleep_us(1000*ms);
+}
+
+void sleep_sec(uint64_t sec){
+	sleep_ms(1000*sec);
+}
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

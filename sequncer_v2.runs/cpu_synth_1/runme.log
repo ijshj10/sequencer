@@ -1,0 +1,129 @@
+
+*** Running vivado
+    with args -log cpu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source cpu.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1265.266 ; gain = 87.996 ; free physical = 2558 ; free virtual = 11126
+INFO: [Synth 8-638] synthesizing module 'cpu' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/synth/cpu.v:60]
+INFO: [Synth 8-638] synthesizing module 'bd_3914' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/synth/bd_3914.v:10]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_dlmb_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'FDS' [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'FDS' (1#1) [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_dlmb_0' (3#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_dlmb_cntlr_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr_v4_0_13_pselect_mask' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr_v4_0_13_pselect_mask' (4#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (5#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (6#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_dlmb_cntlr_0' (7#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_ilmb_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10__parameterized1' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10__parameterized1' (7#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_ilmb_0' (8#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_ilmb_cntlr_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr__parameterized1' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux__parameterized1' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr_v4_0_13_pselect_mask__parameterized0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr_v4_0_13_pselect_mask__parameterized0' (8#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux__parameterized1' (8#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr__parameterized1' (8#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_ilmb_cntlr_0' (9#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_iomodule_0_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'iomodule' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8502]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_2_pselect_mask' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8147]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_2_pselect_mask' (10#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8147]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_2_pselect_mask__parameterized0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8147]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_2_pselect_mask__parameterized0' (10#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8147]
+INFO: [Synth 8-638] synthesizing module 'Iomodule_core' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:6885]
+INFO: [Synth 8-638] synthesizing module 'FIT_Module' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2190]
+INFO: [Synth 8-256] done synthesizing module 'FIT_Module' (11#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2190]
+INFO: [Synth 8-638] synthesizing module 'PIT_Module' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3888]
+INFO: [Synth 8-256] done synthesizing module 'PIT_Module' (12#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3888]
+INFO: [Synth 8-638] synthesizing module 'GPO_Module' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2870]
+INFO: [Synth 8-256] done synthesizing module 'GPO_Module' (13#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2870]
+INFO: [Synth 8-638] synthesizing module 'GPI_Module' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2694]
+INFO: [Synth 8-256] done synthesizing module 'GPI_Module' (14#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2694]
+INFO: [Synth 8-638] synthesizing module 'intr_ctrl' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3070]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_2_MB_FDR' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:969]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_2_MB_FDR' (15#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:969]
+INFO: [Synth 8-256] done synthesizing module 'intr_ctrl' (16#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3070]
+INFO: [Synth 8-256] done synthesizing module 'Iomodule_core' (17#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:6885]
+INFO: [Synth 8-256] done synthesizing module 'iomodule' (18#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8502]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_iomodule_0_0' (19#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_lmb_bram_I_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_lmb_bram_I_0' (30#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_microblaze_I_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_microblaze_I_0' (78#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_rst_0_0' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'SRL16' [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:50689]
+INFO: [Synth 8-256] done synthesizing module 'SRL16' (79#1) [/opt/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:50689]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (80#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (81#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (82#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (83#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (84#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_rst_0_0' (85#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914' (86#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/bd_0/synth/bd_3914.v:10]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (87#1) [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/ip/cpu/synth/cpu.v:60]
+Finished RTL Elaboration : Time (s): cpu = 00:01:38 ; elapsed = 00:01:52 . Memory (MB): peak = 1653.852 ; gain = 476.582 ; free physical = 2986 ; free virtual = 11458
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:39 ; elapsed = 00:01:53 . Memory (MB): peak = 1653.852 ; gain = 476.582 ; free physical = 2997 ; free virtual = 11471
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1846.875 ; gain = 0.000 ; free physical = 2741 ; free virtual = 11225
+Finished Constraint Validation : Time (s): cpu = 00:01:57 ; elapsed = 00:02:17 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2882 ; free virtual = 11347
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:57 ; elapsed = 00:02:17 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2882 ; free virtual = 11347
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:57 ; elapsed = 00:02:17 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2882 ; free virtual = 11347
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2952 ; free virtual = 11420
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:24 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2941 ; free virtual = 11409
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:08 ; elapsed = 00:02:31 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2835 ; free virtual = 11304
+Finished Timing Optimization : Time (s): cpu = 00:02:09 ; elapsed = 00:02:31 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2829 ; free virtual = 11299
+Finished Technology Mapping : Time (s): cpu = 00:02:09 ; elapsed = 00:02:32 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2831 ; free virtual = 11300
+Finished IO Insertion : Time (s): cpu = 00:02:10 ; elapsed = 00:02:32 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:10 ; elapsed = 00:02:32 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    10|
+|2     |LUT2     |    58|
+|3     |LUT3     |    56|
+|4     |LUT4     |   208|
+|5     |LUT5     |    66|
+|6     |LUT6     |    88|
+|7     |LUT6_2   |    81|
+|8     |MULT_AND |     2|
+|9     |MUXCY_L  |    69|
+|10    |MUXF7    |    32|
+|11    |RAM32X1D |    64|
+|12    |RAMB36E1 |    32|
+|13    |SRL16    |     1|
+|14    |SRL16E   |    49|
+|15    |XORCY    |    50|
+|16    |FD       |    32|
+|17    |FDE      |    47|
+|18    |FDR      |     9|
+|19    |FDRE     |   744|
+|20    |FDS      |     5|
+|21    |FDSE     |    24|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 1846.875 ; gain = 669.605 ; free physical = 2832 ; free virtual = 11300
+synth_design: Time (s): cpu = 00:02:12 ; elapsed = 00:02:35 . Memory (MB): peak = 1846.875 ; gain = 682.980 ; free physical = 2875 ; free virtual = 11342

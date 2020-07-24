@@ -1,0 +1,29 @@
+#ifndef RTO_H
+#define RTO_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+const int rto_base = get_slot_addr(BRIDGE_BASE, S4_RTO);
+enum {
+	timer_lower_reg = 0,
+	timer_upper_reg = 1,
+	cmd_and_send_reg = 2, // If written, write buffer
+	buffer_status_reg = 3, // {30'b0, full, empty}
+	timer_upper_buffer_reg = 4,
+	timer_lower_buffer_reg = 5,
+	cmd_buffer_reg = 6,
+	dout_reg = 7
+};
+
+void send_rto_cmd(uint64_t time, uint32_t cmd){
+
+}
+
+
+#ifdef __cplusplus
+extern }
+#endif
+
+#endif

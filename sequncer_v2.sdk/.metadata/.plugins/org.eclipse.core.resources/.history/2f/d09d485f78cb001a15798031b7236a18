@@ -1,0 +1,25 @@
+#include "lex.h"
+#include <string.h>
+
+char *yytext = "";
+int yyleng = 0;
+int yylineno = 0;
+
+token_type lookahead = -1;
+
+token_type lex(){
+	yytext += yyleng;
+	while(isspace(*current))
+		++current;
+
+}
+
+int match(token_type token){
+	if(lookahead == -1)
+		lookahead = lex();
+	return lookahead == token;
+}
+
+void advance(){
+	lookahead = lex();
+}

@@ -1,0 +1,45 @@
+#ifndef GPIO_H
+#define GPIO_H
+
+#include "io_rw.h"
+#include "io_map.h"
+
+#ifdef _cplusplus
+extern "C"{
+#endif
+
+static const uint32_t gpo_base = get_slot_addr(BRIDGE_BASE, S2_GPO);
+static const uint32_t gpi_base = get_slot_addr(BRIDGE_BASE, S3_GPI);
+
+static uint32_t dout = 0;
+
+
+void gpo_set(uint32_t dout){
+	io_write(gpo_base, 0, dout);
+}
+
+uint32_t gpo_get(){
+	return dout;
+}
+
+void gpo_set_i(int i, int val){
+	if(val == 0){
+		dout &= ~(1<<i);
+	}
+	else if(val == 1){
+		dout |= (i<<1);
+	}
+	gpo_set(dout);
+}
+
+
+uint32_t gpi_get(){
+	return io_read(gpi_base, 0);
+}
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

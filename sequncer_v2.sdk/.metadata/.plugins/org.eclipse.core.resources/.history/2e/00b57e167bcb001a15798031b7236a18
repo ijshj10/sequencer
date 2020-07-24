@@ -1,0 +1,59 @@
+#include "gpio.h"
+#include "timer.h"
+#include "uart.h"
+#include <string.h>
+
+char buf[128];
+char *current;
+
+int keyword(){
+	if(*current >= 'a' && *current <= 'z'){
+		int ret = *current - 'a';
+		current++;
+		return ret;
+	}
+	return -1;
+}
+
+
+
+void statement(){
+	int peri1 = keyword();
+	int peri2 = -1;
+	if(*current == '='){
+		current++;
+		if(*current == '0' || *current == '1'){
+			gpo_set_i(peri1, *current - '0');
+		}
+		else{
+			peri2 = keyword();
+		}
+	}
+	else{
+		if(gpo_get() & (1<<peri1))
+			print("1");
+		else
+			print("0");
+	}
+}
+
+int main(){
+	timer_init();
+
+	while(1){
+		int i = 0;
+		print(">> ");
+		while(1){
+			int c;
+			while((c=read_byte())==-1);
+			buf[i++] = c;
+			if(c == '\r')
+				break;
+			write_byte(c);
+		}
+		print("\n\r");
+		current = buf;
+		statement();
+		print("\n\r");
+	}
+}

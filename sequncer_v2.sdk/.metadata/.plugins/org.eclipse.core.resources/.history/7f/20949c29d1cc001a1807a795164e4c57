@@ -1,0 +1,56 @@
+#include <stdint.h>
+#include <stdlib.h>
+#include "uart.h"
+#include "timer.h"
+#include "rto.h"
+#include <stdio.h>
+#define BUFFER_SIZE 256
+
+#define DEBUG_ON
+
+#ifdef DEBUG_ON
+#define DEBUG(x) print(x)
+#endif
+#else
+#define DEBUG(X) (void(x))
+
+
+
+void get_cmd(){
+	uint32_t len;
+	rto_time_t rto_time;
+	uint32_t cmd;
+
+	len = read_uint32();
+	for(uint32_t i=0; i<len; ++i){
+		rto_time.lower = read_uint32();
+		rto_time.upper = read_uint32();
+		cmd = read_uint32();
+		send_rto_cmd(rto_time, cmd);
+	}
+}
+
+void interact(){
+	char cmd;
+	char buffer[256];
+	print("GOT INTERACTIVE\r\n");
+	while(1){
+		if((cmd = read_blocking()) == 'x')
+			break;
+		if(cmd == 'a'){
+			sprintf(buffer, "%d", (int)get_buffer_status());
+			print(buffer);
+		}
+	}
+}
+
+int main(){
+	timer_init();
+	while(1){
+		pause();
+		clear();
+		get_cmd();
+		go();
+		interact();
+	}
+}

@@ -1,0 +1,41 @@
+#include "gpio.h"
+#include "timer.h"
+#include "uart.h"
+#include <string.h>
+
+char buf[128];
+char *current;
+
+int keyword(){
+	if()
+	return -1;
+}
+
+int value(){
+	if(*current = )
+}
+
+void statement(){
+
+}
+
+int main(){
+	timer_init();
+
+	while(1){
+		int i = 0;
+		print(">> ");
+		while(1){
+			int c;
+			while((c=read_byte())==-1);
+			buf[i++] = c;
+			if(c == '\r')
+				break;
+			write_byte(c);
+		}
+		print("\n\r");
+		current = buf;
+		statement();
+		print("\n\r");
+	}
+}

@@ -1,0 +1,8 @@
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.3/bin/unwrapped/lnx64.o/xelab -wto 92af1ce036b84a84b729af15a0e7fbd1 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sym_top_behav xil_defaultlib.sym_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-91] addr is not declared [/home/hj/sequncer_v2/sequncer_v2.srcs/sim_1/new/sym_top.sv:11]
+ERROR: [VRFC 10-2063] Module <uart> not found while processing module instance <uart_unit> [/home/hj/sequncer_v2/sequncer_v2.srcs/sources_1/imports/modules/uart.sv:230]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -1,0 +1,20 @@
+#ifndef GPO_H
+#define GPO_H
+
+#include "io_rw.h"
+#include "io_map.h"
+
+#ifdef _cplusplus
+extern "C"{
+#endif
+
+static const uint32_t gpo_base = get_slot_addr(BRIDGE_BASE, S2_GPO);
+
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

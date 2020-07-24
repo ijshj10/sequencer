@@ -1,0 +1,23 @@
+#ifndef LEXER_H
+#define LEXER_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#define buf_size 128
+
+typedef enum {
+	KEYWORD,EQ,VALUE
+}lexeme;
+
+char buf[buf_size];
+
+int match(lexeme);
+void advance();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+

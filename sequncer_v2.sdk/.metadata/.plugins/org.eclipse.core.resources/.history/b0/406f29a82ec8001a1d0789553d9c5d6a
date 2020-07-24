@@ -1,0 +1,17 @@
+#include "io_map.h"
+#include "io_rw.h"
+
+
+#define UART_BASE get_slot_addr(BRIDGE_BASE, S1_UART)
+
+int uart_rx_empty()
+{
+	return io_read(UART_BASE, 0) & (1<<8);
+}
+
+
+
+int main(){
+	while(1){
+	}
+}
